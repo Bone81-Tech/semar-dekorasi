@@ -1,0 +1,25 @@
+{
+  "name": "Semar Dekorasi",
+  "short_name": "SemarDekor",
+  "description": "Party & Wedding Decoration Rentals",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f9f9f9",
+  "theme_color": "#1F4D36",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/favicon_io/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "images/favicon_io/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

@@ -1,0 +1,769 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Container base styles for mobile */
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.semar-text {
+  color: #1F4D36; /* Hijau tua (deep forest green) */
+}
+
+.dekorasi-text {
+  color: #8B2E2E; /* Merah gelap hangat (warm dark red) */
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.install-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background 0.3s;
+  color: #1F4D36;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.install-btn:hover {
+  background: #f2f2f2;
+  color: #1F4D36;
+}
+
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.mobile-menu-toggle:focus {
+  outline: none;
+}
+
+.mobile-menu-toggle span {
+  width: 100%;
+  height: 3px;
+  background: #333;
+  transition: all 0.3s linear;
+  transform-origin: center;
+  position: relative;
+  display: block;
+}
+
+/* Navigation */
+nav {
+  width: 100%;
+  display: none; /* Hidden by default for mobile */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 12px 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+  font-size: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+nav ul li a:hover {
+  color: #1F4D36;
+  background-color: #f9f9f9;
+}
+
+nav ul li:last-child a {
+  border-bottom: none;
+}
+
+/* Mobile menu active state */
+nav.active {
+  display: block;
+}
+
+/* Hamburger animation */
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Show install button when PWA can be installed */
+.install-btn.show {
+  display: flex !important;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/gambar-dekorasi/gbr-3.webp') no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.btn {
+  display: inline-block;
+  background: #1F4D36;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background: #8B2E2E;
+}
+
+/* Info Section */
+.info {
+  background: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.info .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.info-box {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px; /* Batasi lebar maksimum di layar besar */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+}
+
+.info-box i {
+  font-size: 2rem;
+  color: #1F4D36;
+  margin-bottom: 10px;
+}
+
+.info-box h3 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.info-box p {
+  font-size: 0.95rem;
+}
+
+.info-box a {
+  color: #1F4D36;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.info-box a:hover {
+  color: #8B2E2E;
+  text-decoration: underline;
+}
+
+/* Services Section */
+.services {
+  padding: 50px 20px;
+  background: #fafafa;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile first - single column */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-card i {
+  font-size: 2.5rem;
+  color: #8B2E2E;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 50px 20px;
+  background: white;
+}
+
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Carousel Styles */
+.carousel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-btn {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 10px;
+  transition: background 0.3s;
+  color: #333;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.indicator.active {
+  background: white;
+}
+
+/* Mobile styles for carousel */
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 250px;
+  }
+  
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    margin: 5px;
+  }
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+  background: #fafafa;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column; /* Mobile first - stacked layout */
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 100%; /* Mobile first - full width */
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.contact-info h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.contact-info p {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.contact-info a {
+  color: #1F4D36;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  color: #8B2E2E;
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background: #1F4D36;
+  color: white;
+  text-align: center;
+  padding: 25px 15px 15px;
+  margin-top: 40px;
+}
+
+.social-media {
+  margin-bottom: 15px;
+}
+
+.social-media a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-media a:hover {
+  color: #8B2E2E;
+}
+
+footer p {
+  font-size: 0.85rem;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1F4D36;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.whatsapp-float:hover {
+  background: #8B2E2E;
+  transform: scale(1.1);
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+    padding: 0 15px;
+  }
+
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+  }
+  
+  .semar-text {
+    color: #1F4D36; /* Hijau tua (deep forest green) */
+  }
+
+  .dekorasi-text {
+    color: #8B2E2E; /* Merah gelap hangat (warm dark red) */
+  }
+
+  .header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .install-btn {
+    display: none; /* Hide install button on larger screens */
+  }
+
+  .mobile-menu-toggle {
+    display: none;
+  }
+
+  nav {
+    display: block !important; /* Show navigation on larger screens */
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+  }
+
+  nav ul li a {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-bottom: none;
+  }
+
+  nav ul li a:hover {
+    background-color: transparent;
+  }
+
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+
+  .info-box {
+    width: calc(50% - 15px); /* Two columns on tablet */
+    margin-bottom: 0;
+  }
+
+  .services h2,
+  .gallery h2,
+  .contact h2 {
+    font-size: 2.2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Two columns minimum on tablet */
+    gap: 25px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .gallery-item img {
+    height: 180px;
+  }
+
+  .contact-content {
+    flex-direction: row; /* Side by side layout on tablet and above */
+    gap: 30px;
+  }
+
+  .contact-info,
+  #contactForm {
+    min-width: calc(50% - 15px);
+  }
+
+  .whatsapp-float {
+    width: 55px;
+    height: 55px;
+    font-size: 2rem;
+    bottom: 25px;
+    right: 25px;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+    padding: 0 15px;
+  }
+
+  .header .container {
+    max-width: 1200px;
+  }
+
+  .logo {
+    height: 80px;
+  }
+
+  .hero {
+    padding: 100px 20px;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+
+  .info .container {
+    max-width: 1200px;
+  }
+
+  .info-box {
+    width: calc(33.333% - 20px); /* Three columns on desktop */
+  }
+
+  .services h2,
+  .gallery h2,
+  .contact h2 {
+    font-size: 2.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns on desktop */
+    gap: 30px;
+  }
+
+  .service-card {
+    padding: 30px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr); /* Three columns on desktop */
+    gap: 20px;
+  }
+
+  .gallery-item img {
+    height: 200px;
+  }
+
+  .contact-content {
+    gap: 40px;
+  }
+
+  .contact-info,
+  #contactForm {
+    min-width: calc(50% - 20px);
+    padding: 30px;
+  }
+
+  footer {
+    padding: 20px;
+  }
+}
+
+/* Large desktop styles */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+
+  .header .container {
+    max-width: 1200px;
+  }
+
+  .info .container {
+    max-width: 1200px;
+  }
+
+  .services-grid,
+  .gallery-grid {
+    max-width: 1200px;
+  }
+
+  .contact-content {
+    max-width: 1200px;
+  }
+
+  .whatsapp-float {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    bottom: 30px;
+    right: 30px;
+  }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Semar Dekorasi | Party & Wedding Decoration Rentals</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/x-icon" href="images/favicon_io/favicon.ico">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-container">
+          <img src="images/logo.webp" alt="Semar Dekorasi Logo" class="logo">
+          <h1 class="logo-text"><span class="semar-text">SEMAR</span> <span class="dekorasi-text">DEKORASI</span></h1>
+        </div>
+        <div class="header-buttons">
+          <button class="install-btn" aria-label="Install aplikasi" style="display: none;">
+            <i class="fas fa-download"></i>
+          </button>
+          <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <nav aria-label="Navigasi Utama" class="mobile-menu">
+        <ul>
+          <li><a href="#home">Beranda</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#gallery">Galeri</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Semar Dekorasi</h1>
+      <p>Party & Wedding Decoration Rentals</p>
+      <a href="#contact" class="btn">Pesan Sekarang</a>
+    </div>
+  </section>
+
+  <!-- About / Info Section -->
+  <section class="info">
+    <div class="container">
+      <div class="info-box">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Alamat</h3>
+        <p>Wiyung Gg 03 RT 03 RW 03 No. 03</p>
+      </div>
+      <div class="info-box">
+        <i class="far fa-clock"></i>
+        <h3>Jam Kerja</h3>
+        <p>Senin - Minggu 08.00 - 16.00</p>
+      </div>
+      <div class="info-box">
+        <i class="fab fa-whatsapp"></i>
+        <h3>WhatsApp</h3>
+        <p><a href="https://wa.me/6283830122304" target="_blank">0838 3012 2304</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Layanan Kami</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-heart"></i>
+          <h3>Dekorasi Pernikahan</h3>
+          <p>Paket lengkap dekorasi akad, resepsi, dan pelaminan sesuai tema impian Anda.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-birthday-cake"></i>
+          <h3>Dekorasi Ulang Tahun</h3>
+          <p>Untuk anak maupun dewasa, kami siapkan dekorasi menarik dan seru!</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-glass-cheers"></i>
+          <h3>Dekorasi Acara Spesial</h3>
+          <p>Arab, Natal, Khitanan, Wisuda, dan lainnya — sesuai kebutuhan acara Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2>Galeri Dekorasi</h2>
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-item"><img src="images/gambar-dekorasi/gbr-1.webp" alt="Dekorasi Pernikahan"></div>
+          <div class="carousel-item"><img src="images/gambar-dekorasi/gbr-2.webp" alt="Dekorasi Ulang Tahun"></div>
+          <div class="carousel-item"><img src="images/gambar-dekorasi/gbr-3.webp" alt="Dekorasi Acara Spesial"></div>
+          <div class="carousel-item"><img src="images/gambar-dekorasi/gbr-4.webp" alt="Dekorasi Pelaminan"></div>
+          <div class="carousel-item"><img src="images/gambar-dekorasi/gbr-5.webp" alt="Dekorasi Khitanan"></div>
+          <div class="carousel-item"><img src="images/gambar-dekorasi/gbr-6.webp" alt="Dekorasi Wisuda"></div>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn prev-btn" aria-label="Gambar sebelumnya">❮</button>
+          <button class="carousel-btn next-btn" aria-label="Gambar berikutnya">❯</button>
+        </div>
+        <div class="carousel-indicators">
+          <span class="indicator active" data-index="0"></span>
+          <span class="indicator" data-index="1"></span>
+          <span class="indicator" data-index="2"></span>
+          <span class="indicator" data-index="3"></span>
+          <span class="indicator" data-index="4"></span>
+          <span class="indicator" data-index="5"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Kontak Kami</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Hubungi Kami</h3>
+          <p><strong>Alamat:</strong> Wiyung Gg 03 RT 03 RW 03 No. 03</p>
+          <p><strong>Jam Kerja:</strong> Senin - Minggu 08.00 - 16.00</p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/6283830122304" target="_blank">0838 3012 2304</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="social-media">
+        <a href="https://web.facebook.com/setiawan.marvel.1" aria-label="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/semardekorasi/" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <p>&copy; 2025 Semar Dekorasi. Party & Wedding Decoration Rentals. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/6283830122304" target="_blank" class="whatsapp-float">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
