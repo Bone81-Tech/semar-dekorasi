@@ -577,8 +577,8 @@ footer p {
     gap: 10px;
   }
 
-  .install-btn {
-    display: none; /* Hide install button on larger screens */
+    .install-btn {
+    display: none; /* Hide by default, show only when PWA can be installed */
   }
 
   .mobile-menu-toggle {
